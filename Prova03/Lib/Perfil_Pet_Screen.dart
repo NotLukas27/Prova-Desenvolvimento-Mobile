@@ -1,4 +1,3 @@
-// lib/perfil_pet_screen.dart
 import 'package:flutter/material.dart';
 
 // --- Definição do Enum para Gênero (fora das classes) ---
@@ -153,7 +152,7 @@ class _PerfilPetScreenState extends State<PerfilPetScreen> {
                   ),
                   const SizedBox(height: 16.0),
 
-                  // --- TextFormField para Idade (em anos) ---
+                  // --- TextFormField para Idade ---
                   TextFormField(
                     controller: idadeController,
                     keyboardType: TextInputType.number,
@@ -320,7 +319,7 @@ class _PerfilPetScreenState extends State<PerfilPetScreen> {
 
             // --- Botões de Ação ---
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Melhor para distribuir botões de forma mais equitativa
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Melhor para distribuir botões de forma mais organizada
               children: [
                 // --- Botão Salvar ---
                 ElevatedButton.icon(
@@ -328,19 +327,7 @@ class _PerfilPetScreenState extends State<PerfilPetScreen> {
                     if (_formKey.currentState!.validate()) {
                       // Se o formulário for válido, exiba a SnackBar de sucesso
                       _exibirSnackBar('Dados salvos com sucesso!');
-
-                      // Opcional: Aqui você pode coletar os dados e enviá-los para um serviço/API
-                      print('--- Dados Coletados ---');
-                      print('Nome: ${nomeController.text}');
-                      print('Raça: ${racaController.text}');
-                      print('Idade: ${idadeController.text}');
-                      print('Observações: ${observacoesController.text}');
-                      print('Gênero: ${_generoSelecionado?.name ?? 'Não selecionado'}');
-                      print('Gosta de crianças: $_gostaCriancas');
-                      print('Convive com outros animais: $_conviveOutrosAnimais');
-                      print('Disponível para adoção: $_disponivelParaAdocao');
-                      print('-----------------------');
-
+                      
                     } else {
                       // Se o formulário NÃO for válido, exiba a SnackBar de erro
                       _exibirSnackBar('Por favor, preencha todos os campos obrigatórios corretamente.');
