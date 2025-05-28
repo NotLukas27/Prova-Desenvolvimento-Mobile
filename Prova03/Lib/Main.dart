@@ -17,7 +17,6 @@ class CadastroPetScreen extends StatefulWidget {
 }
 
 class _CadastroPetScreenState extends State<CadastroPetScreen> {
-  // Controladores para os campos de texto
   final TextEditingController _nomeController = TextEditingController();
   final TextEditingController _racaController = TextEditingController();
   final TextEditingController _idadeController = TextEditingController();
@@ -44,10 +43,8 @@ class _CadastroPetScreenState extends State<CadastroPetScreen> {
     _exibirSnackBar('Campos limpos!');
   }
 
-  // Função para simular o salvamento (você expandiria isso para salvar dados reais)
+  // Função para simular o salvamento
   void _salvarPerfil() {
-    // Aqui você coletaria todos os dados e os enviaria para algum lugar
-    // Por exemplo, você pode imprimir no console para ver os valores
     print('--- Dados do Pet ---');
     print('Nome: ${_nomeController.text}');
     print('Raça: ${_racaController.text}');
