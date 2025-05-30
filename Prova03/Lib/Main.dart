@@ -56,30 +56,30 @@ class _MyAppState extends State<MyApp> {
           prefixIconColor: Colors.grey[600], // Cor dos ícones de prefixo
         ),
         radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          fillColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.blueAccent; // Cor do rádio selecionado
             }
             return Colors.grey;
           }),
         ),
         checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          fillColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.blueAccent; // Cor do checkbox selecionado
             }
             return Colors.grey;
           }),
         ),
         switchTheme: SwitchThemeData(
-          thumbColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          thumbColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.green; // Cor do "polegar" do switch quando ligado
             }
             return Colors.grey;
           }),
-          trackColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          trackColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.green.withOpacity(0.5); // Cor da "trilha" do switch quando ligado
             }
             return Colors.grey.withOpacity(0.5);
@@ -134,30 +134,30 @@ class _MyAppState extends State<MyApp> {
           prefixIconColor: Colors.grey[800], // Cor dos ícones de prefixo
         ),
         radioTheme: RadioThemeData(
-          fillColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          fillColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.white; // Cor do rádio selecionado (branco)
             }
             return Colors.grey;
           }),
         ),
         checkboxTheme: CheckboxThemeData(
-          fillColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
-              return Colors.white; // Cor do checkbox selecionado (branco)
+          fillColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+              return Colors.blueAccent; // Cor do checkbox selecionado (branco)
             }
             return Colors.grey;
           }),
         ),
         switchTheme: SwitchThemeData(
-          thumbColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          thumbColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.lightGreenAccent; // Verde mais claro para o switch no modo escuro
             }
             return Colors.grey;
           }),
-          trackColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.selected)) {
+          trackColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
               return Colors.lightGreenAccent.withOpacity(0.5);
             }
             return Colors.grey.withOpacity(0.5);
